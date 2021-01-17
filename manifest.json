@@ -1,38 +1,61 @@
 {
-    "name": "Rocketchat",
-    "id": "Rocketchat",
     "packaging_format": 1,
+    "name": "RocketChat",
+    "id": "rocketchat",
     "description": {
-        "en": "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)",
-        "fr": "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+        "en": "the ultimate chat platform"
     },
-    "version": "1.0~ynh1",
-    "url": "https://example.com",
-    "license": "free",
+    "url": "https://rocket.chat",
+    "license": "GPL-3.0",
+    "version": "0.73.2",
     "maintainer": {
-        "name": "John doe",
-        "email": "john.doe@example.com",
-        "url": "http://example.com"
-    },
-    "requirements": {
-        "yunohost": ">= 1.0.0"
+        "name": "selamanse",
+        "email": "selamanse@scheinfrei.info",
+        "url": "https://github.com/selamanse"
     },
     "multi_instance": false,
     "services": [
-        "nginx",
+        "nginx"
     ],
+    "requirements": {
+        "yunohost": ">> 2.5.6"
+    },
     "arguments": {
         "install" : [
             {
                 "name": "domain",
                 "type": "domain",
                 "ask": {
-                    "en": "Choose a domain name for ynhexample",
-                    "fr": "Choisissez un nom de domaine pour ynhexample"
+                    "en": "Choose a domain for Rocketchat"
                 },
-                "example": "example.com"
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "ask": {
+                    "en": "Choose a path for RocketChat"
+                },
+                "example": "/rocketchat",
+                "default": "/rocketchat"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "ask": {
+                    "en": "Is it a public application?"
+                },
+                "default": "Yes"
+            },
+            {
+               "name": "lang",
+               "type": "string",
+                "ask": {
+                    "en": "Select default language"
+                },
+                "choices": ["English"],
+                "default": "English"
             }
-            
         ]
     }
 }
