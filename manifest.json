@@ -22,40 +22,7 @@
     },
     "arguments": {
         "install" : [
-            {
-                "name": "domain",
-                "type": "domain",
-                "ask": {
-                    "en": "Choose a domain for Rocketchat"
-                },
-                "example": "domain.org"
-            },
-            {
-                "name": "path",
-                "type": "path",
-                "ask": {
-                    "en": "Choose a path for RocketChat"
-                },
-                "example": "/rocketchat",
-                "default": "/rocketchat"
-            },
-            {
-                "name": "is_public",
-                "type": "boolean",
-                "ask": {
-                    "en": "Is it a public application?"
-                },
-                "default": "Yes"
-            },
-            {
-               "name": "lang",
-               "type": "string",
-                "ask": {
-                    "en": "Select default language"
-                },
-                "choices": ["English"],
-                "default": "English"
-            }
+            
         ]
     }
 }
